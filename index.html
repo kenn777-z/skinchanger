@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090909">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>SO2 // SKIN VAULT</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Skin Vault home"><span class="brand-mark">S</span><span>SKIN<span class="red">VAULT</span><small>COMMUNITY COMPANION</small></span></a>
+      <button class="icon-btn" id="installHint" aria-label="Install app" title="Install">↥</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="live-dot"></span> COLLECTION DATABASE</div>
+        <h1>BUILD YOUR<br><span class="outline">DREAM LOADOUT.</span></h1>
+        <p>A personal collection planner and visual catalogue. Browse, save and organise your favourite looks.</p>
+        <div class="hero-stats">
+          <div><strong id="itemCount">12</strong><span>ITEMS</span></div>
+          <div><strong id="savedCount">0</strong><span>FAVOURITES</span></div>
+          <div><strong>01</strong><span>LOCAL PROFILE</span></div>
+        </div>
+      </section>
+
+      <section class="toolbar">
+        <div class="section-heading"><div><span class="eyebrow">THE ARMORY</span><h2>COLLECTION</h2></div><span class="count" id="shownCount">12 RESULTS</span></div>
+        <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search item or weapon..." autocomplete="off"></label>
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="All">ALL</button>
+          <button class="filter" data-category="Rifles">RIFLES</button>
+          <button class="filter" data-category="Pistols">PISTOLS</button>
+          <button class="filter" data-category="Knives">KNIVES</button>
+          <button class="filter" data-category="Gloves">GLOVES</button>
+        </div>
+      </section>
+
+      <section class="grid" id="items" aria-live="polite"></section>
+
+      <section class="saved-panel">
+        <div class="section-heading"><div><span class="eyebrow">YOUR PERSONAL PICKS</span><h2>FAVOURITES</h2></div><span class="count" id="favLabel">0 SAVED</span></div>
+        <div id="favorites" class="favorites-empty">Tap the ☆ on any card to save it here.</div>
+      </section>
+    </main>
+    <footer><span class="brand-mark small">S</span><span>SKINVAULT <small>UNOFFICIAL FAN-MADE COMPANION · NOT AFFILIATED WITH STORED OR GAME DEVELOPERS</small></span></footer>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
